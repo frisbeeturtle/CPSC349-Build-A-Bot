@@ -57,7 +57,6 @@
       border: 2px solid white;
       border-radius: 10px;
     }
-
   </style>
 </head>
 
@@ -66,7 +65,7 @@
     <h1>Build-A-Bot</h1>
     <nav>
       <ul>
-        <li><a href="final.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="build.html">Build</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -76,30 +75,81 @@
 
   <main>
     <div class="featured">
-      <h2>About us</h2>
+      <h2>Lets build your bot</h2>
     </div>
 
     <section>
       <h3>Head Selection</h3>
-      <select id="head-selection" onchange="displaySelectedImage()">
-        <option value="">--Select a head--</option>
-        <option value="head1.jpg">Head 1</option>
-        <option value="head2.jpg">Head 2</option>
-        <option value="head3.jpg">Head 3</option>
-      </select>
-      <img id="selected-image" src="" alt="">
+      <div>
+        <label for="head-select">Select a head:</label>
+        <select id="head-select">
+          <option value="head1">Head 1</option>
+          <option value="head2">Head 2</option>
+          <option value="head3">Head 3</option>
+        </select>
+      </div>
+      <div>
+        <img id="head-image" src="" alt="Head Image">
+      </div>
     </section>
-    
+
+    <section>
+      <h3>body Selection</h3>
+      <div>
+        <label for="body-select">Select a body:</label>
+        <select id="body-select">
+          <option value="body1">body 1</option>
+          <option value="body2">body 2</option>
+          <option value="body3">body 3</option>
+        </select>
+      </div>
+      <div>
+        <img id="body-image" src="" alt="body Image">
+      </div>
+    </section>
+
+    <section>
+      <h3>legs Selection</h3>
+      <div>
+        <label for="legs-select">Select a legs:</label>
+        <select id="legs-select">
+          <option value="legs1">legs 1</option>
+          <option value="legs2">legs 2</option>
+          <option value="legs3">legs 3</option>
+        </select>
+      </div>
+      <div>
+        <img id="legs-image" src="" alt="legs Image">
+      </div>
+    </section>
+
     <script>
-      function displaySelectedImage() {
-        const selectElement = document.getElementById("head-selection");
-        const selectedValue = selectElement.value;
-        const selectedImageElement = document.getElementById("selected-image");
-        selectedImageElement.src = selectedValue;
-        selectedImageElement.style.display = "block";
-      }
+      const headSelect = document.getElementById("head-select");
+      const headImage = document.getElementById("head-image");
+
+      const bodySelect = document.getElementById("body-select");
+      const bodyImage = document.getElementById("body-image");
+
+      const legsSelect = document.getElementById("legs-select");
+      const legsImage = document.getElementById("legs-image");
+
+      headSelect.addEventListener("change", function () {
+        const selectedOption = headSelect.value;
+        headImage.src = `images/${selectedOption}.png`;
+      });
+
+      bodySelect.addEventListener("change", function () {
+        const selectedOption = bodySelect.value;
+        bodyImage.src = `images/${selectedOption}.png`;
+      });
+
+      legsSelect.addEventListener("change", function () {
+        const selectedOption = legsSelect.value;
+        legsImage.src = `images/${selectedOption}.png`;
+      });
+
     </script>
-    
+
 
   </main>
 

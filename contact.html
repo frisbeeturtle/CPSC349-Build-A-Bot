@@ -58,6 +58,8 @@
       border-radius: 10px;
     }
 
+    
+
   </style>
 </head>
 
@@ -66,7 +68,7 @@
     <h1>Build-A-Bot</h1>
     <nav>
       <ul>
-        <li><a href="final.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="build.html">Build</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -76,20 +78,31 @@
 
   <main>
     <div class="featured">
-      <h2>About us</h2>
+      <h2>Contact us</h2>
     </div>
 
     <section>
-      <h3>Jorge A Garcia</h3>
-      <p>Im a student at CSUF</p>
-      <a href="#">Read More</a>
+      <h3>Our emails</h3>
+      <p>frisbeeturtle@csu.fullerton.edu milesf7@csu.fullerton.edu</p>
     </section>
 
     <section>
-      <h3>Miles Furnish</h3>
-      <p>Student at CSUF</p>
-      <a href="#">Read More</a>
+      <h3>Send us a message</h3>
+      <form action="contact.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea><br>
+    
+        <input type="submit" value="Submit">
+      </form>
     </section>
+
+    
 
   </main>
 
@@ -102,3 +115,5 @@
 </body>
 
 </html>
+
+
