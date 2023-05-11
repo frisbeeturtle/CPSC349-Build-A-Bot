@@ -7,4 +7,4 @@ about page tells the user about us.
 contact page is a page where the user would send comments to us.
 ## this website was made by
 Jorge A Garcia  cwid:890373939 ----- 
-Miles Furnish   
+Miles Furnish   cwid:888584166
